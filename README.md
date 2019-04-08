@@ -11,4 +11,19 @@ Download `common_functions.sh` and put it in a directory that is in your PATH (e
 Download `switchjdk.sh` and put it in a directory that is in your PATH (eg `/usr/local/sbin`).
 Edit `switchjdk.sh` and configure it to switch your installed JDKs.
 
+## How to use
 
+Just invoque `switchjdk.sh 11` (or whatever numbers you have configured).
+
+To make it more confortable I added a few aliases to my environment:
+
+```
+$ vi ~/.bash_profile
+
+  # Easily switch JDKs for the current Bash session
+  alias jdk7='. setjdk.sh 7'
+  alias jdk8='. setjdk.sh 8'
+  alias jdk11='. setjdk.sh 11'
+```
+
+Then from the command line you just need to run `jdk8`, `jdk11`, ... in order to switch.
